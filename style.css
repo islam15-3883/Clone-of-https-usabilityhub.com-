@@ -1,0 +1,387 @@
+
+/* import poppins(regular 400 and bold 700)  and Roboto(regular 400 and bold 700) 
+ fonts from google fonts. 
+For heading we use poppins and for paragraph roboto.
+when we want try to clone any website then we use css peeper extention 
+for collect all images */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap');
+
+
+/* resets class*/ 
+
+/* It is a universal selector which means any style you specify 
+within *{ } applies to every element on your page.*/
+
+
+* {
+    margin: 0; /*Margin is just the space outside the border. */
+    padding: 0; /* used to add space within an content*/
+    box-sizing: border-box;    /*If you set box-sizing: border-box; 
+                               on an element, padding and border are included in the width
+                               and height:*/
+}
+
+
+/* declaring global variable . we use the :root selector and
+inside it, we define our variables.
+
+Global variables can be accessed/used through the entire document,
+while local variables can be used only inside the selector where 
+it is declared*/
+
+
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color-dark: #2294ed;    /*accent color can be used with primary text color 
+                                          and other colors*/
+    --padding-inline-section:10px;
+
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;  /* set the font-family for all text on a webpage*/
+    color: var(--primary-text-color);  /*  css funcation    */
+}
+
+/* we change default font size*/
+
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+    
+
+}
+a {
+
+    text-decoration: none; /* nothing show as underline*/ 
+    display: inline-block; /* Block elements always start from a new line.
+     Inline elements never start from a new line.*/
+}
+
+
+ul{
+
+    list-style: none; /* remove dot(.) before text)*/
+}
+
+
+/* utility class*/
+
+.small-bold-text{
+
+    font-size: 1rem;
+    font-weight: 700; /* value of 700 is equivalent to the keyword "bold"*/
+}
+
+
+.container{
+    max-width: 1180px;
+    margin-inline: auto; /* left and right same */
+    padding-inline: var(--padding-inline-section);
+}
+
+
+.flex{
+
+    display: flex;
+    text-align: center;
+}
+
+
+.hover-link{
+
+    color: var(--primary-text-color);
+}
+.hover-link:hover{
+
+    color: var(--accent-color);
+    transition:0.2 ease-out;
+}
+
+
+
+
+/* top banner*/
+
+
+
+.banner-text{
+    color: white;
+    padding: 15px 30px ;
+    text-align: center;
+
+
+}
+
+.top-banner{
+
+    background-image: url('./asset\ 30.png');
+    background-color: #4fb3d4;
+    background-size: 300px; /* image repeat */
+    
+}
+
+
+
+
+/* nav-var*/
+
+
+.main-nav{
+
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.company-logo img{
+
+    width: 200px;
+    height: 30px;
+}
+.become-a-tester{
+
+    justify-content:right;
+
+}
+.tester-button{
+
+    box-shadow: 0 0 1px var(--secondary-text-color);
+    
+    background-color:var(--accent-color-dark);
+    
+    border-radius: 2px;
+    
+    width: 160px;
+    height: 35px;
+    font-size:1rem ;
+    text-align:initial;
+    
+    
+    padding: 4px 12px;
+    
+    color:white !important;
+    
+    transition: 0.2 ease-out;
+}
+
+
+
+.nav-links{
+
+    flex-basis: 730px;
+}
+
+
+
+.nav-links ul {
+
+    justify-content: end;
+    gap:40px;
+}
+
+
+.primary-button{
+
+    
+    box-shadow: 0 0 4px var(--secondary-text-color);
+    
+    background-color:var(--accent-color-dark);
+    
+    border-radius: 4px;
+    
+    font-weight: 700;
+    
+    padding: 12px 24px;
+    
+    color:white !important;
+    
+    transition: 0.2 ease-out;
+
+}
+
+ 
+.primary-button:hover{
+
+    background-color: var(--primary-text-color);
+}
+
+.secondary-button{
+
+    border: .2px solid var(--secondary-text-color);
+    border-radius: 6px;
+    font-weight: 700;
+    padding: 12px 24px;
+    color: var(--secondary-text-color);
+    transition: 0.2 ease-out;
+}
+
+.secondary-button:hover{
+    border-color: var(--primary-text-color);
+    color:var(--primary-text-color) !important
+}
+
+/* hero section*/
+
+
+.header-right img{
+
+    width:600px;
+}
+
+header{
+    padding: 50px var(--padding-inline-section ) 0;
+}
+
+.header-section{
+    justify-content: center;
+    
+    gap: 50px;
+    
+}
+
+.header-left h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.get-started-btn{
+    margin-top: 20px;
+}
+.header-left {
+    max-width: 40vw;
+    text-align: justify;
+    padding: 70px 40px 0px 0px ;
+    
+
+    
+}
+
+
+/* companies - section*/
+
+.companies-header{
+
+    text-align: center;
+    margin-block: 30px;
+    color: var(--primary-text-color);
+
+
+}
+
+.logos{
+
+    justify-content: space-between ;
+}
+
+.logo{
+
+    height: 46px;
+    flex-wrap: wrap;
+}
+
+/*features section*/
+
+/*features header*/
+
+.features-section{
+    padding: 80px var(--padding-inline-section) 0;
+    
+}
+
+
+.features-header{
+    text-align: center;
+}
+.features-header h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/*features area */
+
+
+.features-area{
+
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.features-card{
+
+    flex-direction: column;
+    display: block;
+    gap: 20px;
+    max-width: 30%;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.features-card img{
+
+    width: 50px;
+    height: 50px;
+    
+    
+}
+
+.features-section{
+
+    background-image: url(./asset\ 41.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* big feature section*/
+
+.big-feature-section{
+    padding: 30px var(--padding-inline-section) 0;
+
+}
+
+.big-feature-container{
+    gap:30px;
+}
+
+.feature-image img{
+
+    width: 100%;
+}
+
+.feature-discription{
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+.feature-discription h4{
+    
+    padding-bottom: 5px;
+}
+
+.feature-discription h3{
+    padding-bottom: 10px;
+}
+.feature-discription p{
+    text-align: left;
+}
